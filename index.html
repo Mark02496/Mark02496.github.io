@@ -1,128 +1,61 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mark Hayden | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      color: #ddd;
-      text-decoration: none;
-      margin: 0 1rem;
-    }
-    nav a:hover {
-      color: white;
-    }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card h3 {
-      margin: 0.5rem;
-    }
-    .card p {
-      margin: 0.5rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #222;
-      color: #ccc;
-      margin-top: 3rem;
-    }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Minimal Page</title>
+    <style>
+        body {
+            background-color: white; /* sets the background color of the whole page */
+            margin: 0; /* removes default margin */
+            font-family: Jetbrains mono; 
+        }
+
+        h1 {
+            color: black; /* sets text color */
+            position: absolute; /* allows us to place it exactly */
+            top: 20px; /* distance from top of page */
+            left: 20px; /* distance from left of page */
+            transform: rotate(-15deg); /* tilts the text diagonally */
+        }
+
+
+        .heading {
+            position: absolute;
+            font-size: 1.2em;
+            font-weight: normal;
+            cursor: pointer; /* shows it’s interactive */
+        }
+        .heading:hover {
+            font-weight: bold; /* bold on hover */
+        }
+
+        /* Individual positions for creative layout */
+        #works {
+            top: 150px;
+            left: 50px;
+            transform: rotate(-10deg);
+        }
+
+        #about {
+            top: 100px;
+            left: 150px;
+            transform: rotate(15deg);
+        }
+
+        #contact {
+            top: 50px;
+            left: 250px;
+            transform: rotate(-5deg);
+        }
+    </style>
 </head>
 <body>
-  <header>
     <h1>Mark Hayden</h1>
-    <p>Portfolio of Creative Works</p>
-    <nav>
-      <a href="#works">Works</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <section id="works">
-      <h2>Selected Works</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="work1.jpg" alt="Work 1">
-          <h3>Title of Work 1</h3>
-          <p>Short description of this creative piece.</p>
-        </div>
-        <div class="card">
-          <img src="work2.jpg" alt="Work 2">
-          <h3>Title of Work 2</h3>
-          <p>Short description of this creative piece.</p>
-        </div>
-        <div class="card">
-          <img src="work3.jpg" alt="Work 3">
-          <h3>Title of Work 3</h3>
-          <p>Short description of this creative piece.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        A short introduction about your creative journey, influences, and 
-        philosophy of work. Keep it succinct but reflective.
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Mark Hayden. All rights reserved.
-  </footer>
-</body>
-</html>
+    <div id="works" class="heading">Works</div>
+    <div id="about" class="heading">About</div>
+    <div id="contact" class="heading">Contact</div>
 </body>
 </html>
