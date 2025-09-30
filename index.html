@@ -66,6 +66,7 @@
         const mainContent = document.getElementById('main-content');
         const homeBtn = document.getElementById('home-btn');
         const contactBtn = document.getElementById('contact');
+        const aboutBtn = document.getElementById('about');
 
         homeBtn.addEventListener('click', () => {
             mainContent.innerHTML = '<img src="curtain.jpg" alt="curtain" class="photo">';
@@ -76,6 +77,11 @@
                 <h2>:)</h2>
                 <p>Email: mark@mindmyvagina.com</p>
                 <p>Phone: 123-456-7890</p>
+            `;
+        });
+        aboutBtn.addEventListener('click', () => {
+            mainContent.innerHTML = `
+                <p>Born 2001 CE in so called Vancouver, Mark croaked but wished to be called other than frog</p>
             `;
         });
     </script>
