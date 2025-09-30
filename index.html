@@ -5,51 +5,37 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M*** H*****</title>
+    <title>Mark Hayden</title>
     <style>
         body {
-            background-color: white; /* sets the background color of the whole page */
-            margin: 0; /* removes default margin */
-            font-family: Jetbrains mono; 
+            background-color: white;
+            margin: 0;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         h1 {
-            color: black; /* sets text color */
-            position: absolute; /* allows us to place it exactly */
-            top: 20px; /* distance from top of page */
-            left: 20px; /* distance from left of page */
-            transform: rotate(-15deg); /* tilts the text diagonally */
+            color: black;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            transform: rotate(-15deg);
+            cursor: pointer;
         }
-
 
         .heading {
             position: absolute;
             font-size: 1.2em;
             font-weight: normal;
-            cursor: pointer; /* shows it’s interactive */
+            cursor: pointer;
         }
         .heading:hover {
-            font-weight: bold; /* bold on hover */
+            font-weight: bold;
         }
 
-        /* Individual positions for creative layout */
-        #works {
-            top: 150px;
-            left: 50px;
-            transform: rotate(-10deg);
-        }
+        #works { top: 150px; left: 50px; transform: rotate(-10deg); }
+        #about { top: 100px; left: 150px; transform: rotate(15deg); }
+        #contact { top: 50px; left: 250px; transform: rotate(-5deg); }
 
-        #about {
-            top: 100px;
-            left: 150px;
-            transform: rotate(15deg);
-        }
-
-        #contact {
-            top: 50px;
-            left: 250px;
-            transform: rotate(-5deg);
-        }
         .photo {
             display: block;
             margin-left: auto;
@@ -57,15 +43,41 @@
             margin-top: 200px;
             max-width: 66%; 
             height: auto;
+        }
+
+        /* Main content area below header */
+        #main-content {
+            margin-top: 350px; /* push below header/links */
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Mark Hayden</h1>
+    <h1 id="home-btn">Mark Hayden</h1>
     <div id="works" class="heading">Works</div>
     <div id="about" class="heading">About</div>
-    <div id="contact" class="heading">
-        <a href="contact.html" style="text-decoration: none; color: inherit;">Contact</a>
-</div>
-    <img src="curtain.jpg" alt="curtain" class="photo">
+    <div id="contact" class="heading">Contact</div>
+
+    <div id="main-content">
+        <img src="curtain.jpg" alt="curtain" class="photo">
+    </div>
+
+    <script>
+        const mainContent = document.getElementById('main-content');
+        const homeBtn = document.getElementById('home-btn');
+        const contactBtn = document.getElementById('contact');
+
+        homeBtn.addEventListener('click', () => {
+            mainContent.innerHTML = '<img src="curtain.jpg" alt="curtain" class="photo">';
+        });
+
+        contactBtn.addEventListener('click', () => {
+            mainContent.innerHTML = `
+                <h2>Contact Me</h2>
+                <p>Email: mark@example.com</p>
+                <p>Phone: 123-456-7890</p>
+            `;
+        });
+    </script>
 </body>
 </html>
