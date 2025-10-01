@@ -47,7 +47,6 @@
         .smallphoto {
             display: block;
             margin: 30px auto 0;
-            width: 120px;      /* fixed shrink */
             max-width: 20%;    /* or relative shrink */
             height: auto;
             transform: rotate(-10deg);
@@ -74,6 +73,7 @@
         const homeBtn = document.getElementById('home-btn');
         const contactBtn = document.getElementById('contact');
         const aboutBtn = document.getElementById('about');
+        const worksBtn = document.getElementById('works');
 
         homeBtn.addEventListener('click', () => {
             mainContent.innerHTML = `
@@ -94,6 +94,12 @@
                 <img src="me.jpg" alt="me" class="smallphoto">
                 <p>Born 2001 CE in so-called Vancouver, now residing à Montréal, 
                 Mark <i>croaked</i> but wished to be called nicer things than <i>frog</i>.</p>
+            `;
+        });
+
+        worksBtn.addEventListener('click', () => {
+            mainContent.innerHTML = `
+                <h2>I'm working on it</h2>
             `;
         });
     </script>
