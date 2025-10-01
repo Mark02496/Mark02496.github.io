@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M*** H*****</title>
-    <style>
+        <style>
         body {
-            background-color: white;
             margin: 0;
+            background: white;
             font-family: 'JetBrains Mono', monospace;
         }
 
@@ -27,37 +27,34 @@
             font-size: 1.2em;
             font-weight: normal;
             cursor: pointer;
+            transition: font-weight 0.2s;
         }
         .heading:hover {
             font-weight: bold;
         }
 
-        #works { top: 150px; left: 50px; transform: rotate(-10deg); }
-        #about { top: 100px; left: 150px; transform: rotate(15deg); }
-        #contact { top: 50px; left: 250px; transform: rotate(-5deg); }
+        #works   { top: 150px; left: 50px;  transform: rotate(-10deg); }
+        #about   { top: 100px; left: 150px; transform: rotate(15deg);  }
+        #contact { top: 50px;  left: 250px; transform: rotate(-5deg);  }
 
         .photo {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 0px;
-            max-width: 66%; 
+            margin: 0 auto;
+            max-width: 66%;
             height: auto;
-            
         }
+
         .smallphoto {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 30px;
-            max-width: 10%;
+            margin: 30px auto 0;
+            width: 120px;      /* fixed shrink */
+            max-width: 20%;    /* or relative shrink */
             height: auto;
             transform: rotate(-10deg);
         }
-        
-        /* Main content area below header */
+
         #main-content {
-            margin-top: 200px; /* push below header/links */
+            margin-top: 200px; 
             text-align: center;
         }
     </style>
@@ -79,7 +76,9 @@
         const aboutBtn = document.getElementById('about');
 
         homeBtn.addEventListener('click', () => {
-            mainContent.innerHTML = '<img src="curtain.jpg" alt="curtain" class="photo">';
+            mainContent.innerHTML = `
+                <img src="curtain.jpg" alt="curtain" class="photo">
+            `;
         });
 
         contactBtn.addEventListener('click', () => {
@@ -89,10 +88,12 @@
                 <p>Phone: 123-456-7890</p>
             `;
         });
+
         aboutBtn.addEventListener('click', () => {
             mainContent.innerHTML = `
-                <img src = "me.jpg" alt="me" class "smallphoto">
-                <p>Born 2001 CE in so called Vancouver now residing à Montréal, Mark <i>croaked</i> but wished to be called nicer things than <i>frog</i>.</p>
+                <img src="me.jpg" alt="me" class="smallphoto">
+                <p>Born 2001 CE in so-called Vancouver, now residing à Montréal, 
+                Mark <i>croaked</i> but wished to be called nicer things than <i>frog</i>.</p>
             `;
         });
     </script>
